@@ -36,3 +36,9 @@ build/
 
 ### Mac OS ###
 .DS_Store
+.env
+/Logs/
+Logs/
+extends_reports/
+test-output/
+test-output-thread/
