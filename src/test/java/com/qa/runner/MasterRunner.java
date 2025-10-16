@@ -222,18 +222,18 @@ public class MasterRunner {
     // Return subject and body based on run outcome, allowing optional overrides in config.properties
     private String[] getEmailSubjectAndBody(boolean failureDetected) {
         if (failureDetected) {
-            String subject = getConfigOrDefault("email.subject.failed", "Failed Smoke Test Detected for " + "AMFI Production server"+ " – Time to Investigate!");
+            String subject = getConfigOrDefault("email.subject.failed", "Failed Smoke Test Detected for " + "Rebecco Production server"+ " – Time to Investigate!");
             String body = getConfigOrDefault(
                     "email.body.failed",
-                    "Hi Team,<br><br>Smoke Test scenarios have <b>failed</b> in the latest run for " +"AMFI Production server"+". Please find attached the <b>automation report</b>"
+                    "Hi Team,<br><br>Smoke Test scenarios have <b>failed</b> in the latest run for " +"Rebecco Production server"+". Please find attached the <b>automation report</b>"
                             + " along with any available <b>screenshots</b>.<br><br>Kindly review and take action.<br><br>Regards,<br>Automation"
             );
             return new String[]{subject, body};
         } else {
-            String subject = getConfigOrDefault("email.subject.passed", "Smoke Scenarios Passed for "+"AMFI Production server"+" – Green Run Report");
+            String subject = getConfigOrDefault("email.subject.passed", "Smoke Scenarios Passed for "+"Rebecco Production server"+" – Green Run Report");
             String body = getConfigOrDefault(
                     "email.body.passed",
-                    "Hi Team,<br><br>Great news! <b>Smoke Test has successfully passed on "+"AMFI Production server"+"</b> in the latest run. Attaching the automation report for your records."
+                    "Hi Team,<br><br>Great news! <b>Smoke Test has successfully passed on "+"Rebecco Production server"+"</b> in the latest run. Attaching the automation report for your records."
                             + "<br><br>Regards,<br>Automation"
             );
             return new String[]{subject, body};
